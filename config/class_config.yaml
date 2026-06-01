@@ -1,0 +1,20 @@
+CLASSES_TO_CLASSIFY:
+  NORMAL_CLASS:
+    - AGN
+    - CV
+    - LBV
+    - SLSN
+    - Ia
+    - Ibc
+    - II
+    - M dwarf
+    - Nova
+    - TDE
+  ANOMALOUS_CLASS:
+    - FBOT
+    - LRN
+    - FRB
+    - LGRB
+  VALIDATION_CLASS:
+    - Other
+    - Unknown

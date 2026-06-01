@@ -1,0 +1,11 @@
+colsample_bytree: 0.7406337007234924
+device: gpu
+gamma: 0.2204731565424051
+learning_rate: 0.05176066994286931
+max_depth: 5
+min_child_weight: 8
+n_estimators: 1367
+random_state: 42
+reg_lambda: 0.0013894228511909551
+subsample: 0.6599229152189839
+thread_count: -1

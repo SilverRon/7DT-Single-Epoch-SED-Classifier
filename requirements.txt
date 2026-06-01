@@ -1,0 +1,41 @@
+# ============================================================
+# 7DT-Single-Epoch-SED-Classifier  —  requirements.txt
+# ============================================================
+# Tested with Python 3.8 (conda env "sedml").
+# Compatible with Python 3.8–3.12.
+#
+# Minimum install for running inference with pretrained models:
+#   pip install numpy pandas scikit-learn xgboost joblib pyyaml matplotlib seaborn
+#
+# Full install (feature engineering, retraining, all notebooks):
+#   pip install -r requirements.txt
+# ============================================================
+
+# ---- Core numerical / data ----
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# ---- Machine learning ----
+scikit-learn>=1.3
+xgboost>=2.0
+lightgbm>=3.3
+catboost>=1.2
+optuna>=4.0
+
+# ---- Serialisation ----
+joblib>=1.3
+pyyaml>=6.0
+
+# ---- Astronomy ----
+astropy>=5.1
+# speclite is required only for generating new synthetic photometry
+# Install separately if needed: pip install speclite
+# speclite>=0.10
+
+# ---- Visualisation ----
+matplotlib>=3.7
+seaborn>=0.12
+
+# ---- Utilities ----
+tqdm>=4.0

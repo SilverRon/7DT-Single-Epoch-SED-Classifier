@@ -1,0 +1,34 @@
+WISeREP:
+  AGN: # Main Target
+    spectrum_to_ignore:
+      - /Users/paek/Research/7DT/SED-Classifier/notebook/../data/raw_data/WISeREP/AGN/wiserep_spectra/AT2023zro_2024-11-23_00-00-00_MMT_BINOSPEC_TNS.dat
+      - /Users/paek/Research/7DT/SED-Classifier/notebook/../data/raw_data/WISeREP/AGN/wiserep_spectra/AT2024rqe_2024-12-04_00-00-00_MMT_BINOSPEC_TNS.dat
+      - /Users/paek/Research/7DT/SED-Classifier/notebook/../data/raw_data/WISeREP/AGN/wiserep_spectra/AT2017gff_2017-08-19_06-46-16_ESO-NTT_EFOSC2-NTT_PESSTO_SSDR1-4.csv
+  CV: # Main Target
+    spectrum_to_ignore:
+      - 
+  FBOT:
+    spectrum_to_ignore:
+      - 
+  FRB:
+    spectrum_to_ignore:
+      - 
+  LBV: # Main Target
+    spectrum_to_ignore:
+      - 
+  LRN:
+    spectrum_to_ignore:
+      - 
+  Mdwarf:
+    spectrum_to_ignore:
+      - 
+  Nova:
+    spectrum_to_ignore:
+      - 
+  TDE: # Main Target
+    spectrum_to_ignore:
+      - /Users/paek/Research/7DT/SED-Classifier/data/raw_data/WISeREP/TDE/wiserep_spectra/AT2024pvu_2024-08-13_11-20-07_P200_DBSP_TNS.txt
+  Other:
+    spectrum_to_ignore:
+      - 
+

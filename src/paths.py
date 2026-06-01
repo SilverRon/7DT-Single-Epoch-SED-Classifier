@@ -1,0 +1,122 @@
+#	Library
+import os 
+import yaml
+#
+PROJECT_ROOT = os.path.join(os.getcwd(), '..')
+
+#	Data Paths
+DATA = os.path.join(PROJECT_ROOT, 'data')
+
+SPECTRA_DATA = os.path.join(DATA, 'Spectra')
+SYNPHOT_DATA = os.path.join(DATA, 'Synphot')
+FEATURE_DATA = os.path.join(DATA, 'Feature')
+
+RAW_DATA = os.path.join(DATA, 'raw_data')
+
+#   Open Supernova Catalog
+RAW_OSC_DATA = os.path.join(RAW_DATA, 'OpenSupernovaCatalog')
+SPECTRA_OSC_DATA = os.path.join(SPECTRA_DATA, 'OSC')
+
+#   WISeREP
+RAW_WISEREP_DATA = os.path.join(RAW_DATA, 'WISeREP')
+SPECTRA_WISEREP_DATA = os.path.join(SPECTRA_DATA, 'WISeREP')
+
+RAW_WOLLAEGER_DATA = os.path.join(RAW_DATA, 'Wollaeger+21')
+
+#   Wollaeger+21 (Kilonova)
+## No RAW Folder
+SPECTRA_WOLLAEGER_DATA = os.path.join(SPECTRA_DATA, 'Wollaeger+21')
+
+#	OSC+WISeREP Synphot Data
+PHOT_DATA = os.path.join(SYNPHOT_DATA, 'Photometry')
+
+PHOT_RUBIN_DATA = os.path.join(PHOT_DATA, 'Rubin')
+PHOT_RUBIN_DETECTED_DATA = os.path.join(PHOT_RUBIN_DATA, 'Detection')
+
+PHOT_7DT_DATA = os.path.join(PHOT_DATA, '7DT')
+PHOT_7DT_DETECTED_DATA = os.path.join(PHOT_7DT_DATA, 'Detection')
+PHOT_7DT_DETECTED_DATA_FOR_SNID = os.path.join(PHOT_7DT_DETECTED_DATA, 'SNID')
+
+# Newly compiled OSC+WISeREP Synphot Data
+PHOT_NEW_DATA = os.path.join(SYNPHOT_DATA, 'New_Photometry')
+PHOT_NEW_7DT_DATA = os.path.join(PHOT_NEW_DATA, '7DT')
+PHOT_NEW_7DT_DETECTED_DATA = os.path.join(PHOT_NEW_7DT_DATA, 'Detection')
+
+PHOT_NEW_RUBIN_DATA = os.path.join(PHOT_NEW_DATA, 'Rubin')
+PHOT_NEW_RUBIN_DETECTED_DATA = os.path.join(PHOT_NEW_RUBIN_DATA, 'Detection')
+
+
+
+#   Wollaeger+21
+PHOT_WOLLAEGER_DATA = os.path.join(PHOT_DATA, 'Wollaeger+21')
+PHOT_WOLLAEGER_7DT_DATA = os.path.join(PHOT_WOLLAEGER_DATA, '7DT')
+PHOT_WOLLAEGER_7DT_DETECTED_DATA = os.path.join(PHOT_WOLLAEGER_7DT_DATA, 'Detection')
+
+PHOT_WOLLAEGER_RUBIN_DATA = os.path.join(PHOT_WOLLAEGER_DATA, 'Rubin')
+PHOT_WOLLAEGER_RUBIN_DETECTED_DATA = os.path.join(PHOT_WOLLAEGER_RUBIN_DATA, 'Detection')
+
+# Engrave
+PHOT_ENGRAVE_DATA = os.path.join(SYNPHOT_DATA, 'Engrave')
+PHOT_ENGRAVE_7DT_DATA = os.path.join(PHOT_ENGRAVE_DATA, '7DT')
+PHOT_ENGRAVE_7DT_DETECTED_DATA = os.path.join(PHOT_ENGRAVE_7DT_DATA, 'Detection')
+
+PHOT_ENGRAVE_RUBIN_DATA = os.path.join(PHOT_ENGRAVE_DATA, 'Rubin')
+PHOT_ENGRAVE_RUBIN_DETECTED_DATA = os.path.join(PHOT_ENGRAVE_RUBIN_DATA, 'Detection')
+
+
+
+#   Augmented Photometry Data
+AUGMNETED_PHOT_DATA = os.path.join(SYNPHOT_DATA, 'Augmented_Photometry')
+AUGMNETED_PHOT_RUBIN_DATA = os.path.join(AUGMNETED_PHOT_DATA, 'Rubin')
+AUGMNETED_PHOT_RUBIN_DETECTED_DATA = os.path.join(AUGMNETED_PHOT_RUBIN_DATA, 'Detection')
+AUGMNETED_PHOT_7DT_DATA = os.path.join(AUGMNETED_PHOT_DATA, '7DT')
+AUGMNETED_PHOT_7DT_DETECTED_DATA = os.path.join(AUGMNETED_PHOT_7DT_DATA, 'Detection')
+
+AUGMENTED_BALANCED_PHOT_DATA = os.path.join(SYNPHOT_DATA, 'Augmented_Balanced_Photometry')
+AUGMENTED_BALANCED_PHOT_RUBIN_DATA = os.path.join(AUGMENTED_BALANCED_PHOT_DATA, 'Rubin')
+AUGMENTED_BALANCED_PHOT_RUBIN_DETECTED_DATA = os.path.join(AUGMENTED_BALANCED_PHOT_RUBIN_DATA, 'Detection')
+AUGMENTED_BALANCED_PHOT_7DT_DATA = os.path.join(AUGMENTED_BALANCED_PHOT_DATA, '7DT')
+AUGMENTED_BALANCED_PHOT_7DT_DETECTED_DATA = os.path.join(AUGMENTED_BALANCED_PHOT_7DT_DATA, 'Detection')
+
+#   Feature Data
+FEATURE_ORIGINAL_DATA = os.path.join(FEATURE_DATA, 'Original')
+FEATURE_AUGMENTED_DATA = os.path.join(FEATURE_DATA, 'Augmented')
+FEATURE_BALANCED_DATA = os.path.join(FEATURE_DATA, 'Balanced')
+# FEATURE_RUBIN_DATA = os.path.join(FEATURE_DATA, 'Rubin')
+# FEATURE_7DT_DATA = os.path.join(FEATURE_DATA, '7DT')
+# FEATURE_7DT_RUBIN_DATA = os.path.join(FEATURE_DATA, '7DT_Rubin')
+FEATURE_ANOMALY_DATA = os.path.join(FEATURE_DATA, 'Anomaly')
+FEATURE_NEW_DATA = os.path.join(FEATURE_DATA, 'New')
+
+FEATURE_ENGRAVE_DATA = os.path.join(FEATURE_DATA, 'Engrave')
+
+#   Model Output
+MODEL = os.path.join(PROJECT_ROOT, 'model')
+
+#   Check and Generate each folders defined above
+folders = [
+    PHOT_DATA, 
+    PHOT_RUBIN_DATA, PHOT_7DT_DATA, PHOT_WOLLAEGER_DATA,
+    PHOT_RUBIN_DETECTED_DATA, PHOT_7DT_DETECTED_DATA,
+    PHOT_WOLLAEGER_7DT_DATA, PHOT_WOLLAEGER_7DT_DETECTED_DATA, PHOT_WOLLAEGER_RUBIN_DATA, PHOT_WOLLAEGER_RUBIN_DETECTED_DATA,
+    PHOT_7DT_DETECTED_DATA_FOR_SNID,
+    AUGMNETED_PHOT_DATA, AUGMNETED_PHOT_RUBIN_DATA, AUGMNETED_PHOT_RUBIN_DETECTED_DATA, AUGMNETED_PHOT_7DT_DATA, AUGMNETED_PHOT_7DT_DETECTED_DATA,
+    AUGMENTED_BALANCED_PHOT_DATA, AUGMENTED_BALANCED_PHOT_RUBIN_DATA, AUGMENTED_BALANCED_PHOT_RUBIN_DETECTED_DATA, AUGMENTED_BALANCED_PHOT_7DT_DATA, AUGMENTED_BALANCED_PHOT_7DT_DETECTED_DATA,
+    FEATURE_DATA, FEATURE_ORIGINAL_DATA, FEATURE_AUGMENTED_DATA, FEATURE_ANOMALY_DATA,
+    MODEL,
+
+    PHOT_ENGRAVE_DATA, PHOT_ENGRAVE_7DT_DATA, PHOT_ENGRAVE_7DT_DETECTED_DATA, PHOT_ENGRAVE_RUBIN_DATA, PHOT_ENGRAVE_RUBIN_DETECTED_DATA,FEATURE_ENGRAVE_DATA,
+
+    ]
+for folder in folders:
+	os.makedirs(folder, exist_ok=True)
+
+#	Config
+CONFIG = os.path.join(PROJECT_ROOT, 'config')
+DATA_CONFIG = os.path.join(CONFIG, 'data_config.yaml')
+with open(DATA_CONFIG, 'r') as f:
+    data_config = yaml.safe_load(f)
+
+MODEL_CONFIG = os.path.join(CONFIG, 'model_config.yml')
+with open(MODEL_CONFIG, 'r') as f:
+    model_config = yaml.safe_load(f)

@@ -1,0 +1,56 @@
+7 photometry table read
+7 unique spectra
+7 unique UID generated
+7 photometry table with uid
+
+Feature Engineering
+
+40 Features
+780 color features generated
+38 residual features generated
+36 double residual features generated
+972 semi-global color features generated
+
+Rubin Filters + 40 Filters
+2067 keys generated
+	color: 780
+	res1: 38
+	res2: 36
+	pseudo_color_2: 741
+	pseudo_color_4: 912
+	pseudo_color_8: 948
+	pseudo_color_10: 969
+	pseudo_color_20: 972
+	rubin_7dt_color: 1020
+	rubin_color: 240
+
+2066 keys generated
+783 color-only keys generated
+1023 rubin_7dt_color-only keys generated
+243 rubin_color-only keys generated
+
+Feature Engineering
+
+20 Features
+190 color features generated
+18 residual features generated
+16 double residual features generated
+216 semi-global color features generated
+
+Rubin Filters + 20 Filters
+561 keys generated
+	color: 190
+	res1: 18
+	res2: 16
+	pseudo_color_2: 171
+	pseudo_color_4: 207
+	pseudo_color_8: 213
+	pseudo_color_10: 216
+	pseudo_color_20: 216
+	rubin_7dt_color: 310
+	rubin_color: 120
+
+561 keys generated
+193 color-only keys generated
+313 rubin_7dt_color-only keys generated
+123 rubin_color-only keys generated

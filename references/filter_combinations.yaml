@@ -1,0 +1,121 @@
+# Filter configurations for XGBoost feature-selection experiments
+#
+# Each entry defines a named subset of the 7DT 20-filter mediumband set.
+# The full baseline is:
+#   m400 m425 m450 m475 m500 m525 m550 m575 m600 m625
+#   m650 m675 m700 m725 m750 m775 m800 m825 m850 m875
+#
+# "19-filter" entries remove one filter at a time.
+# "18-filter" entries remove one adjacent or complementary pair.
+
+configurations:
+
+  # ── 19-filter: single-filter ablations ──────────────────────────────────────
+
+  - id: no_m500
+    description: "20 filters minus m500"
+    filters: [m400, m425, m450, m475, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m525
+    description: "20 filters minus m525"
+    filters: [m400, m425, m450, m475, m500, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m650
+    description: "20 filters minus m650"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m675
+    description: "20 filters minus m675"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m700
+    description: "20 filters minus m700"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m725
+    description: "20 filters minus m725"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m750
+    description: "20 filters minus m750"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m775, m800, m825, m850, m875]
+
+  - id: no_m775
+    description: "20 filters minus m775"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m800, m825, m850, m875]
+
+  - id: no_m800
+    description: "20 filters minus m800"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m825, m850, m875]
+
+  - id: no_m825
+    description: "20 filters minus m825"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m850, m875]
+
+  - id: no_m850
+    description: "20 filters minus m850"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m875]
+
+  - id: no_m875
+    description: "20 filters minus m875"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850]
+
+  # ── 18-filter: complementary pair ablations (symmetric across filter range) ─
+
+  - id: no_m400_m550
+    description: "20 filters minus m400 and m550 (symmetric pair)"
+    filters: [m425, m450, m475, m500, m525, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m425_m575
+    description: "20 filters minus m425 and m575 (symmetric pair)"
+    filters: [m400, m450, m475, m500, m525, m550, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m450_m600
+    description: "20 filters minus m450 and m600 (symmetric pair)"
+    filters: [m400, m425, m475, m500, m525, m550, m575, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m475_m625
+    description: "20 filters minus m475 and m625 (symmetric pair)"
+    filters: [m400, m425, m450, m500, m525, m550, m575, m600, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  # ── 18-filter: adjacent pair ablations ──────────────────────────────────────
+
+  - id: no_m400_m425
+    description: "20 filters minus m400 and m425 (blue-end pair)"
+    filters: [m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m450_m475
+    description: "20 filters minus m450 and m475"
+    filters: [m400, m425, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m500_m525
+    description: "20 filters minus m500 and m525"
+    filters: [m400, m425, m450, m475, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m550_m575
+    description: "20 filters minus m550 and m575"
+    filters: [m400, m425, m450, m475, m500, m525, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m600_m625
+    description: "20 filters minus m600 and m625 (Si II region)"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m650, m675, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m650_m675
+    description: "20 filters minus m650 and m675 (H-alpha region)"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m700, m725, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m700_m725
+    description: "20 filters minus m700 and m725"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m750, m775, m800, m825, m850, m875]
+
+  - id: no_m750_m775
+    description: "20 filters minus m750 and m775 (red continuum pair)"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m800, m825, m850, m875]
+
+  - id: no_m800_m825
+    description: "20 filters minus m800 and m825"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m850, m875]
+
+  - id: no_m850_m875
+    description: "20 filters minus m850 and m875 (red-end pair)"
+    filters: [m400, m425, m450, m475, m500, m525, m550, m575, m600, m625, m650, m675, m700, m725, m750, m775, m800, m825]

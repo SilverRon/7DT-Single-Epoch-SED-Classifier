@@ -1,0 +1,153 @@
+# ============================================================
+# 7DT-Single-Epoch-SED-Classifier  —  .gitignore
+# ============================================================
+# Only the following model subdirectories are tracked:
+#   model/iForest_20/     model/iForest_40/
+#   model/Tune_XGBoost_20/  model/Tune_XGBoost_40/
+#   model/Train_Test_Index/
+# All other model experiment directories are excluded below.
+# ============================================================
+
+# ------------------------------------------------------------------
+# Large data directories (too large for GitHub)
+# ------------------------------------------------------------------
+data/raw_data/
+data/Spectra/
+data/Synphot/
+data/Feature/Augmented/
+data/Feature/Balanced/
+data/Feature/New/
+data/Feature/Original/
+data/Feature/Anomaly/
+
+# ------------------------------------------------------------------
+# Experimental / intermediate model directories
+# (keep only the 5 essential paper model directories listed above)
+# ------------------------------------------------------------------
+model/CatBoost_Fine_Tune_include_nova/
+model/Compare_Top3/
+model/different_model/
+model/different_models/
+model/different_sampling/
+model/Feature_Selection_XGBoost_Rubin_7DT/
+model/feature_var/
+model/final_normal_class_model/
+model/grouping/
+model/group_samples/
+model/isolation_forest_base/
+model/LightGBM_Class_Selection/
+model/LightGBM_feature_selection/
+model/LightGBM_Fine_Tune/
+model/LightGBM_Fine_Tune_include_nova/
+model/LightGBM_Fine_Tune_include_nova_mdwarf/
+model/new_CatBoost_Fine_Tune/
+model/new_CatBoost_Fine_Tune_20/
+model/new_CatBoost_Fine_Tune_Rubin/
+model/new_LightGBM_Fine_Tune/
+model/new_LightGBM_Fine_Tune_20/
+model/New_Three_Models_and_Ensemble/
+model/new_XGBoost_Fine_Tune/
+model/new_XGBoost_Fine_Tune_20/
+model/new_XGBoost_Fine_Tune_Rubin/
+model/Rubin_7DT_CatBoost/
+model/Rubin_7DT_CatBoost_Fine_Tune/
+model/Rubin_7DT_LightGBM/
+model/Rubin_7DT_LightGBM_Fine_Tune/
+model/Rubin_7DT_xgboost/
+model/Rubin_7DT_XGBoost/
+model/Rubin_7DT_XGBoost_Fine_Tune/
+model/three_top_models/
+model/Tune_CatBoost_20/
+model/Tune_CatBoost_40/
+model/Tune_CatBoost_Rubin_7DT_20/
+model/Tune_CatBoost_Rubin_7DT_40/
+model/Tune_LightGBM_20/
+model/Tune_LightGBM_40/
+model/Tune_LightGBM_Rubin_7DT_20/
+model/Tune_LightGBM_Rubin_7DT_40/
+model/Tune_XGBoost_20_no_m750_m775/
+model/Tune_XGBoost_40_asteroid_only/
+model/Tune_XGBoost_40_feature_selection/
+model/Tune_XGBoost_Bottom20_Filters/
+model/Tune_XGBoost_Rubin_7DT_20/
+model/Tune_XGBoost_Rubin_7DT_40/
+model/Tune_XGBoost_Rubin_7DT_40_selected_features/
+model/Tune_XGBoost_Top20_Filters/
+model/XGBoost_Fine_Tune_include_nova/
+
+# ------------------------------------------------------------------
+# Legacy, logs, and intermediate outputs
+# ------------------------------------------------------------------
+legacy/
+logs/
+output/
+catboost_info/
+
+# ------------------------------------------------------------------
+# Internal Claude Code tooling
+# ------------------------------------------------------------------
+.claude/
+CLAUDE.md
+
+# ------------------------------------------------------------------
+# Python
+# ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+*.dylib
+
+# ------------------------------------------------------------------
+# Virtual environments / conda
+# ------------------------------------------------------------------
+.env
+.venv
+env/
+venv/
+ENV/
+*.conda/
+
+# ------------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ------------------------------------------------------------------
+# macOS
+# ------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ------------------------------------------------------------------
+# Editors
+# ------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# ------------------------------------------------------------------
+# Backup source files
+# ------------------------------------------------------------------
+*.original.py
+
+# ------------------------------------------------------------------
+# Misc
+# ------------------------------------------------------------------
+*.log
+*.tmp
